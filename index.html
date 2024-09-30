@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merida</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/Css/all.min.css" />
+    <link rel="stylesheet" href="assets/Css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/Css/style.css" />
+  </head>
+  <body>
+    <!-- ========== Loading ========== -->
+    <div class="loading">
+      <div class="loading-icon"></div>
+    </div>
+    <!-- ========== Loading ========== -->
+    <!-- ========== Confirm Modal ========== -->
+    <div id="confirmModal" class="confirm-modal">
+      <div class="confirm-modal-content">
+        <p id="confirmMessage">Are you sure you want to proceed?</p>
+        <button id="confirmYes" class="confirm-btn yes">Yes</button>
+        <button id="confirmNo" class="confirm-btn no">No</button>
+      </div>
+    </div>
+    <!-- ========== Confirm Modal ========== -->
+    <!-- ========== GoToTop ========== -->
+    <div class="toTop fa-regular fa-arrow-alt-circle-up fa-2x"></div>
+    <!-- ========== GoToTop ========== -->
+    <!-- ========== Header ========== -->
+    <header class="header">
+      <nav class="nav">
+        <div class="links container">
+          <div class="logo">
+            <img src="assets/images/logo.png" alt="logo" />
+            <a title="home page" href="./index.html">
+              <h1>Merida</h1>
+            </a>
+          </div>
+          <i class="fa-solid fa-bars btn_open_menu"></i>
+          <ul class="menu">
+            <i class="fa-regular fa-circle-xmark btn_close_menu"></i>
+            <li class="active">
+              <a title="home page" href="./index.html">Home</a>
+            </li>
+            <li><a title="about page" href="./about.html">About</a></li>
+            <li><a title="menu page" href="./menu.html">Menu</a></li>
+            <li>
+              <a title="portfolio page" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li><a title="contact page" href="./contact.html">Contact</a></li>
+            <div class="button">
+              <a title="login page" class="btn" href="./login.html"
+                >Login<i class="fa-solid fa-right-to-bracket"></i
+              ></a>
+              <a class="btn" title="signup page" href="./signup.html"
+                >Sign Up<i class="fa-solid fa-user-plus"></i
+              ></a>
+            </div>
+            <div class="buttons">
+              <p class="user">welcome</p>
+              <button class="btn signout">Signout</button>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- ========== Header ========== -->
+    <!-- ========== Home ========== -->
+    <section class="home" id="home">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="content">
+          <h3>Good food choices are good investments.</h3>
+          <p>HOME OF THE BEST HAND MADE DELICIOUS FOOD</p>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Home ========== -->
+    <!-- ========== Book Table ========== -->
+    <section class="book" id="book">
+      <div class="container">
+        <div class="info">
+          <h3>Our Story</h3>
+          <h2>
+            Until I discovered cooking I was never really interested in anything
+          </h2>
+          <p>
+            Pleased anxious or as in by viewing forbade minutes prevent. Too
+            leave had those get being led weeks blind. Had men rose from down
+            lady able. Its son him ferrars proceed six parlors.
+          </p>
+          <p>
+            Advanced diverted domestic sex repeated bringing you old. Possible
+            procured her trifling laughter thoughts property she met way.
+            Companions shy had solicitude favourable own. Which could saw guest
+            man now heard but. Lasted my coming uneasy marked so should. Gravity
+            letters it amongst herself dearest an windows by. Wooded ladies she
+            basket.
+          </p>
+          <ul>
+            <li>
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="inf">
+                <h4>PHONE</h4>
+                <span>+123 456 7890</span>
+              </div>
+            </li>
+            <li>
+              <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="inf">
+                <h4>EAMIL</h4>
+                <span>support@restcafe.com</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="form">
+          <div class="form-box">
+            <div class="icon">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3>BOOK A TABLE</h3>
+            <form action="">
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" name="" id="" />
+              <select id="table" name="table">
+                <option value="one">1 Person</option>
+                <option value="two">2 Person</option>
+                <option value="three">3 Person</option>
+                <option value="four">4 Person</option>
+              </select>
+              <input type="date" placeholder="Date" name="" id="" />
+              <button type="submit">Book Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Book Table ========== -->
+    <!-- ========== Features ========== -->
+    <section class="features" id="features">
+      <div class="swiper travel__swiper">
+        <div class="swiper-wrapper">
+          <div class="feature_card swiper-slide">
+            <div class="item">
+              <div class="box">
+                <i class="fa-solid fa-utensils"></i>
+                <h4>Fine Dining</h4>
+                <p>
+                  Belonging sir curiosity discovery extremity yet forfeited
+                  prevailed own off. Travelling by introduced of mr terminated.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature_card swiper-slide">
+            <div class="item">
+              <div class="box">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h4>Party and Event</h4>
+                <p>
+                  Belonging sir curiosity discovery extremity yet forfeited
+                  prevailed own off. Travelling by introduced of mr terminated.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature_card swiper-slide">
+            <div class="item">
+              <div class="box">
+                <i class="fa-solid fa-bell-concierge"></i>
+
+                <h4>Buffet</h4>
+                <p>
+                  Belonging sir curiosity discovery extremity yet forfeited
+                  prevailed own off. Travelling by introduced of mr terminated.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature_card swiper-slide">
+            <div class="item">
+              <div class="box">
+                <i class="fa-solid fa-truck-moving"></i>
+                <h4>Home Delivery</h4>
+                <p>
+                  Belonging sir curiosity discovery extremity yet forfeited
+                  prevailed own off. Travelling by introduced of mr terminated.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <i class="fa-solid fa-angle-left arrow-left"></i>
+        <i class="fa-solid fa-angle-right arrow-right"></i>
+      </div>
+    </section>
+    <!-- ========== Features ========== -->
+    <!-- ========== Gallery ========== -->
+    <section class="gallery" id="gallery">
+      <div class="headcontainer">
+        <div class="heading">
+          <h3>Discorver</h3>
+          <h2>OUR MENU</h2>
+          <p>
+            While mirth large of on front. Ye he greater related adapted proceed
+            entered an. Through it examine express promise no. Past add size
+            game cold girl off how old
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="gallery_items"></div>
+      </div>
+    </section>
+    <!-- ========== Gallery ========== -->
+    <!-- ========== Chefs ========== -->
+    <section class="chefs" id="chefs">
+      <div class="headcontainer">
+        <div class="heading">
+          <h3>Chefs</h3>
+          <h2>MEET OUR EXPERTS</h2>
+          <p>
+            While mirth large of on front. Ye he greater related adapted proceed
+            entered an. Through it examine express promise no. Past add size
+            game cold girl off how old
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="chef_items">
+          <div class="chef_item">
+            <div class="image">
+              <img src="assets/images/Chefs/1.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="overlay">
+                <h4>Jessica Jones</h4>
+                <span>CHEF</span>
+              </div>
+              <div class="content">
+                <p>
+                  Explain ten man uncivil engaged conduct. Am likewise betrayed
+                  as declared absolute do.
+                </p>
+                <ul>
+                  <li class="facebook">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="twitter">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="pinterest">
+                    <a href=""><i class="fab fa-pinterest-p"></i></a>
+                  </li>
+                  <li class="linkedin">
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="chef_item">
+            <div class="image">
+              <img src="assets/images/Chefs/2.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="overlay">
+                <h4>Ahel Natasha</h4>
+                <span>PATISSIER</span>
+              </div>
+              <div class="content">
+                <p>
+                  Explain ten man uncivil engaged conduct. Am likewise betrayed
+                  as declared absolute do.
+                </p>
+                <ul>
+                  <li class="facebook">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="twitter">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="pinterest">
+                    <a href=""><i class="fab fa-pinterest-p"></i></a>
+                  </li>
+                  <li class="linkedin">
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="chef_item">
+            <div class="image">
+              <img src="assets/images/Chefs/3.jpg" alt="" />
+            </div>
+            <div class="info">
+              <div class="overlay">
+                <h4>Gabriela Beckett</h4>
+                <span>COOK</span>
+              </div>
+              <div class="content">
+                <p>
+                  Explain ten man uncivil engaged conduct. Am likewise betrayed
+                  as declared absolute do.
+                </p>
+                <ul>
+                  <li class="facebook">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="twitter">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="pinterest">
+                    <a href=""><i class="fab fa-pinterest-p"></i></a>
+                  </li>
+                  <li class="linkedin">
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Chefs ========== -->
+    <!-- ========== Testimonials ========== -->
+    <section class="testimonials" id="testimonials">
+      <div class="headcontainer">
+        <div class="heading">
+          <h3>Reviews</h3>
+          <h2>TESTIMONIALS</h2>
+          <p>
+            While mirth large of on front. Ye he greater related adapted proceed
+            entered an. Through it examine express promise no. Past add size
+            game cold girl off how old
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="swiper testimonial_items">
+          <div class="swiper-wrapper">
+            <div class="testimonial_card swiper-slide">
+              <div class="test_item">
+                <h4>Delicious Burger</h4>
+                <p>
+                  Finished no horrible blessing landlord dwelling dissuade if.
+                  Rent fond am he in on read. Anxious cordial demands settled
+                  entered in do to colonel.
+                </p>
+                <div class="image">
+                  <img src="assets/images/Testimonials/6.jpg" alt="" />
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="info">
+                  <h5>Ahel John</h5>
+                  <ul class="rating">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star-half-alt"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial_card swiper-slide">
+              <div class="test_item">
+                <h4>Awesome pizza</h4>
+                <p>
+                  Finished no horrible blessing landlord dwelling dissuade if.
+                  Rent fond am he in on read. Anxious cordial demands settled
+                  entered in do to colonel.
+                </p>
+                <div class="image">
+                  <img src="assets/images/Testimonials/7.jpg" alt="" />
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="info">
+                  <h5>Michel Athem</h5>
+                  <ul class="rating">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial_card swiper-slide">
+              <div class="test_item">
+                <h4>Great soup</h4>
+                <p>
+                  Finished no horrible blessing landlord dwelling dissuade if.
+                  Rent fond am he in on read. Anxious cordial demands settled
+                  entered in do to colonel.
+                </p>
+                <div class="image">
+                  <img src="assets/images/Testimonials/8.jpg" alt="" />
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="info">
+                  <h5>jack Anderson</h5>
+                  <ul class="rating">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star-half-alt"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial_card swiper-slide">
+              <div class="test_item">
+                <h4>Fantastic food</h4>
+                <p>
+                  Finished no horrible blessing landlord dwelling dissuade if.
+                  Rent fond am he in on read. Anxious cordial demands settled
+                  entered in do to colonel.
+                </p>
+                <div class="image">
+                  <img src="assets/images/Testimonials/9.jpg" alt="" />
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="info">
+                  <h5>Sarah Jhonson</h5>
+                  <ul class="rating">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Testimonials ========== -->
+    <!-- ========== NewsLetter ========== -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="text">
+          <img src="assets/images/About_images/food.png" alt="" />
+          <div class="content">
+            <h4>Sign Up To NewsLetter</h4>
+            <p>Got Email Update About Our Latest Shop...And Receive</p>
+            <h6>$30 Coupon For First Shopping</h6>
+          </div>
+        </div>
+        <form action="" class="newsletter_form">
+          <input
+            type="email"
+            placeholder="Enter your Email Here...."
+            name=""
+            id=""
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    <!-- ========== NewsLetter ========== -->
+    <!-- ========== Footer ========== -->
+    <footer>
+      <div class="container">
+        <div class="big_row">
+          <div class="logo">
+            <img src="assets/images/logo.png" alt="" />
+            <h3>Merida</h3>
+          </div>
+          <p>
+            20, floor, Queenslad Victoria Building. 60 california street
+            california USA
+          </p>
+          <ul>
+            <li><span>Phone:</span>+123 456 7890</li>
+            <li><span>Email:</span>support@validtheme.com</li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <h4>FOOD MENU</h4>
+          <div class="links">
+            <a href="#">Chees croissants</a>
+            <a href="#">Bruschetti</a>
+            <a href="#">Tasty Snacks</a>
+            <a href="#">Awesome Vegetables</a>
+            <a href="#">Meal for whole family</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Shipping & Information</h4>
+          <div class="links">
+            <a href="#">Delivery Information</a>
+            <a href="#">Discount</a>
+            <a href="#">Payment & Shipping</a>
+            <a href="#">Estimated Delivery Time</a>
+            <a href="#">Shipping Guide</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>OPENING HOURS</h4>
+          <ul class="links">
+            <li><span>Mon - Tues :</span>6.00 am - 10.00 pm</li>
+            <li><span>Wednes - Thurs :</span>8.00 am - 6.00 pm</li>
+            <li><span>Launch :</span>Everyday</li>
+            <li>
+              <span>Sun :</span>
+              <div class="btn small">close</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom_footer">
+        <div class="container">
+          <p>Copyright &copy; <span>Merida.</span> all rights reserved</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== Footer ========== -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
