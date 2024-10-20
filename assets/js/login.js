@@ -6,7 +6,7 @@ let userList = [];
 if (localStorage.getItem("users") != null) {
   userList = JSON.parse(localStorage.getItem("users"));
 }
-document.title = "GamesReaper " + "Login";
+document.title = "Merida-" + "Login";
 function login() {
   if (emptyInputs() == true) {
     getalert("All inputs required.", "red");

@@ -7,7 +7,7 @@ let userList = [];
 if (localStorage.getItem("users") != null) {
   userList = JSON.parse(localStorage.getItem("users"));
 }
-document.title = "GamesReaper " + "Signup";
+document.title = "Merida-" + "Signup";
 function SignUp() {
   let data = {
     name: userName.value,
