@@ -48,69 +48,74 @@ function displayDetails(recipe) {
 
   document.title = `Merida ${title || "Recipe Details"}`;
   item.innerHTML = `
-      <h1>${title || "N/A"}</h1>
-      <img src="${image || "../images/default-image.jpg"}" alt="${
-    title || "No Image Available"
-  }">
-      <div class="recipe-info">
-        <p><strong>Servings:</strong> ${servings || "N/A"}</p>
-        <p><strong>Ready in:</strong> ${readyInMinutes || "N/A"} minutes</p>
-        <p><strong>Price per Serving:</strong> $${
-          pricePerServing ? pricePerServing.toFixed(2) : "N/A"
-        }</p>
-        <p><strong>Calories:</strong> ${
+  <div class="details">
+  
+  <div class="recipe-card">
+    
+    <div class="recipe-header">
+      <img src="${image || "../images/default-image.jpg"}" alt="${title}">
+      <div class="overlay">
+        <h1>${title}</h1>
+      </div>
+    </div>
+
+    <div class="recipe-content">
+      
+      <div class="recipe-stats">
+        <div><span>🍽</span> ${servings || "N/A"} servings</div>
+        <div><span>⏱</span> ${readyInMinutes || "N/A"} min</div>
+        <div><span>🔥</span> ${
           calories ? calories.amount + " " + calories.unit : "N/A"
-        }</p>
-        <p><strong>Diets:</strong> ${
-          diets && diets.length ? diets.join(" , ") : "N/A"
-        }</p>
-        <p><strong>Dish Types:</strong> ${
-          dishTypes && dishTypes.length ? dishTypes.join(" , ") : "N/A"
-        }</p>
-        <p><strong>Cuisines:</strong> ${
-          cuisines && cuisines.length ? cuisines.join(" , ") : "N/A"
-        }</p>
+        }</div>
+        <div><span>💲</span> ${
+          pricePerServing ? pricePerServing.toFixed(2) : "N/A"
+        }</div>
       </div>
 
-      <div class="recipe-summary">
-        <h2>Summary:</h2>
+      <div class="tags">
+        ${(diets || []).map((d) => `<span>${d}</span>`).join("")}
+        ${(cuisines || []).map((c) => `<span>${c}</span>`).join("")}
+      </div>
+
+      <div class="section">
+        <h2>Summary</h2>
         <p>${summary || "No summary available."}</p>
       </div>
 
-      <div class="recipe-ingredients">
-        <h2>Ingredients:</h2>
+      <div class="section">
+        <h2>Ingredients</h2>
         <ul>
           ${
-            extendedIngredients && extendedIngredients.length
+            extendedIngredients?.length
               ? extendedIngredients
-                  .map((ingredient) => `<li>${ingredient.original}</li>`)
+                  .map((i) => `<li>${i.original}</li>`)
                   .join("")
-              : "<li>No ingredients available</li>"
+              : "<li>No ingredients</li>"
           }
         </ul>
       </div>
 
-      <div class="recipe-instructions">
-        <h2>Instructions:</h2>
+      <div class="section">
+        <h2>Instructions</h2>
         <ol>
           ${
-            analyzedInstructions &&
-            analyzedInstructions.length &&
-            analyzedInstructions[0].steps.length
+            analyzedInstructions?.[0]?.steps?.length
               ? analyzedInstructions[0].steps
-                  .map((instruction) => `<li>${instruction.step}</li>`)
+                  .map((s) => `<li>${s.step}</li>`)
                   .join("")
-              : "<li>No instructions available</li>"
+              : "<li>No instructions</li>"
           }
         </ol>
       </div>
 
-      <div class="recipe-source">
-        <p>Recipe Source: <a class="btn" href="${
-          sourceUrl || "#"
-        }" target="_blank">${sourceName || "N/A"}</a></p>
-      </div>
-  `;
+      <a class="btn" href="${sourceUrl || "#"}" target="_blank">
+        View Full Recipe
+      </a>
+
+    </div>
+    </div>
+  </div>
+`;;
   details_container.appendChild(item);
 }
 
@@ -136,7 +141,7 @@ function displaySimilar() {
     let imageUrl = `https://spoonacular.com/recipeImages/${ele.id}-312x231.jpg`;
 
     item.innerHTML = `
-        <a onclick="selectRecipe(${ele.id})">
+        <a class="image_container" onclick="selectRecipe(${ele.id})">
           <img src="${imageUrl}" alt="${ele.title}" />
         </a>
         <div class="info">

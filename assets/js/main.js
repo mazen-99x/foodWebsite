@@ -7,7 +7,11 @@ let gallery_items = document.querySelector(".gallery_items");
 /*=============== Change BackGround  ===============*/
 items_image.forEach((item, index) => {
   let i = (index % 5) + 1;
-  item.style.backgroundImage = `url('assets/images/Features/${i}.jpg')`;
+  if (i != 2) {
+    item.style.backgroundImage = `url('assets/images/Features/${i}.jpg')`;
+  } else if (i === 2) {
+    item.style.backgroundImage = `url('assets/images/Features/4.jpg')`;
+  }
 });
 /*=============== onClick Functions  ===============*/
 document.title = `Merida-home`;
@@ -15,7 +19,7 @@ document.title = `Merida-home`;
 async function getFood() {
   try {
     let data = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${api_key}&number=6&query=pizza`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${api_key}&number=6&query=pizza`,
     );
     let req = await data.json();
     FoodList = req.results;
@@ -27,26 +31,46 @@ async function getFood() {
   }
 }
 function display() {
+ 
+  gallery_items.innerHTML = "";
+
   FoodList.forEach((ele) => {
     let item = document.createElement("div");
+    
     item.classList.add("gallery_item");
     item.id = `${ele.id}`;
+
+    
+    const apiImageUrl = ele.image || "../images/About_images/placeholder.png";
+    const localPlaceholder = "../images/About_images/placeholder.png";
+
     item.innerHTML = `
-    <a onclick="getDetails(${ele.id})" href="./details.html">
-    <img src="${ele.image}" alt="" />
-    </div>
-    <div class="info">
-    <p><span>Name:</span>${ele.title}</p>
-    </div>
-    </a>
-  `;
+      <div class="image_container">
+        <img
+        onclick="getDetails(${ele.id})"
+          src="${apiImageUrl}" 
+          alt="${ele.title}" 
+          onerror="this.onerror=null;this.src='${localPlaceholder}';" 
+        />
+        ${!ele.image ? '<span class="no_image">No Image</span>' : ""}
+      </div>
+
+      <div class="info">
+        <h3>${ele.title}</h3>
+       
+      </div>
+
+
+    `;
+
     gallery_items.appendChild(item);
   });
 }
+
 getFood();
 // Redirect to details page and store game ID
 async function getDetails(id) {
-  localStorage.setItem("foodId", id); // Store game ID in localStorage
+  localStorage.setItem("foodId", id); 
   window.location.href = "details.html"; // Redirect to details page
 }
 /*=============== Scroll animation  ===============*/

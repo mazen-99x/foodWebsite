@@ -10,7 +10,6 @@ for (var i = 0; i < imgList.length; i++) {
     var imgs = e.target.getAttribute("src");
     innerbox.style.backgroundImage = `url(${imgs})`;
     currentIndex = imgList.indexOf(e.target);
-    console.log(currentIndex);
   });
 }
 closebtn.addEventListener("click", closeElement);
